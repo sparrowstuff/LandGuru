@@ -1,11 +1,33 @@
 .main-link {
 	@include flexCenter(row);
 	gap: 0.68rem;
+	$root: &;
 
 	&__text {
 		font-family: $poppins;
 		font-weight: 700;
 		font-size: $rem-125;
 		color: $white;
+
+		transition: color $transition-300;
+	}
+
+	&__icon {
+		color: $white;
+		transition: color $transition-300, transform $transition-300,
+			scale $transition-300;
+	}
+
+	&:hover,
+	&:focus-visible {
+		outline: unset;
+
+		#{$root}__text {
+			color: $yellow;
+		}
+
+		#{$root}__icon {
+			color: $yellow;
+		}
 	}
 }

@@ -465,4 +465,18 @@ button {
   font-weight: 700;
   font-size: 1.25rem;
   color: #ffffff;
+  transition: color ease-in 0.3s;
+}
+.main-link__icon {
+  color: #ffffff;
+  transition: color ease-in 0.3s, transform ease-in 0.3s, scale ease-in 0.3s;
+}
+.main-link:hover, .main-link:focus-visible {
+  outline: unset;
+}
+.main-link:hover .main-link__text, .main-link:focus-visible .main-link__text {
+  color: #f6c416;
+}
+.main-link:hover .main-link__icon, .main-link:focus-visible .main-link__icon {
+  color: #f6c416;
 }/*# sourceMappingURL=style.css.map */
