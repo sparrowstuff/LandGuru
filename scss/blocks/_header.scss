@@ -7,4 +7,9 @@
 		justify-content: space-between;
 		gap: 0.62rem;
 	}
+
+	&__btn-block {
+		@include flexCenter(row);
+		gap: 0.62rem;
+	}
 }

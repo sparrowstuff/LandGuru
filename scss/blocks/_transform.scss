@@ -1,0 +1,13 @@
+.transform {
+	.burger-btn__top-line {
+		transform: translateY(0.8rem) rotate(-45deg);
+	}
+
+	.burger-btn__bottom-line {
+		transform: translateY(-0.7rem) rotate(45deg);
+	}
+
+	.burger-btn__main-line {
+		opacity: 0;
+	}
+}

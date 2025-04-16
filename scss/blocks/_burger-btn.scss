@@ -1,0 +1,24 @@
+.burger-btn {
+	background-color: transparent;
+	width: 2.5rem;
+	height: 2rem;
+	border: unset;
+	padding: unset;
+	display: none;
+
+	&__top-line,
+	&__main-line,
+	&__bottom-line {
+		width: 100%;
+		height: 0.12rem;
+		background-color: $white;
+		border-radius: 50%;
+
+		transition: opacity $transition-300, transform $transition-300;
+	}
+
+	@media (max-width: 48rem) {
+		@include flexCenter;
+		gap: 0.62rem;
+	}
+}
