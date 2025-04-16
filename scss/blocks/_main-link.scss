@@ -1,0 +1,11 @@
+.main-link {
+	@include flexCenter(row);
+	gap: 0.68rem;
+
+	&__text {
+		font-family: $poppins;
+		font-weight: 700;
+		font-size: $rem-125;
+		color: $white;
+	}
+}

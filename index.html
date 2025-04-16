@@ -25,17 +25,128 @@
 			href="./favicon/apple-touch-icon.png"
 		/>
 		<link rel="manifest" href="./site.webmanifest" />
+		<style></style>
 	</head>
 	<body>
 		<section class="top-block">
 			<header class="header">
 				<div class="container">
-					<a
-						class="header__main-link main-link"
-						href="#"
-						aria-label="go to main page"
-						><svg class="header__link-icon"></svg>
-					</a>
+					<div class="header__wrapper">
+						<a
+							class="header__main-link main-link"
+							href="#"
+							aria-label="go to main page"
+							><svg
+								class="header__link-icon main-link__icon"
+								width="30"
+								height="20"
+								aria-hidden="true"
+							>
+								<use xlink:href="images/sprite.svg#main-logo"></use>
+							</svg>
+							<span class="header__main-link-text main-link__text"
+								>Landguru</span
+							>
+						</a>
+						<nav class="main-nav">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link"
+										><span class="main-nav__link-text">Home</span>
+									</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link"
+										><span class="main-nav__link-text">Adversite</span
+										><svg
+											width="40"
+											height="40"
+											class="main-nav__icon"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 50 50"
+										>
+											<use xlink:href="images/sprite.svg#link-down"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link"
+										><span class="main-nav__link-text">Supports</span>
+										<svg
+											width="40"
+											height="40"
+											class="main-nav__icon"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 50 50"
+										>
+											<use xlink:href="images/sprite.svg#link-down"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link"
+										><span class="main-nav__link-text">Contact</span></a
+									>
+								</li>
+							</ul>
+							<div class="header__btn-block">
+								<button class="header__start-btn btn" type="button">
+									Get Started
+								</button>
+								<button
+									class="header__burger burger-btn"
+									type="button"
+									aria-label="open burger menu"
+								>
+									<span class="burger-btn__top-line"></span>
+									<span class="burger-btn__main-line"></span>
+									<span class="burger-btn__bottom-line"></span>
+								</button>
+							</div>
+							<nav class="main-nav main-nav--burger">
+								<ul class="main-nav__list">
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Home</span>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Adversite</span
+											><svg
+												width="40"
+												height="40"
+												class="main-nav__icon"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 50 50"
+											>
+												<use xlink:href="images/sprite.svg#link-down"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Supports</span>
+											<svg
+												width="40"
+												height="40"
+												class="main-nav__icon"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 50 50"
+											>
+												<use xlink:href="images/sprite.svg#link-down"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Contact</span></a
+										>
+									</li>
+								</ul>
+							</nav>
+						</nav>
+					</div>
 				</div>
 			</header>
 			<section class="hero">

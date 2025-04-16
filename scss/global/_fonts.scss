@@ -1,6 +1,6 @@
 // medium
 @font-face {
-	font-family: 'Poppins';
+	font-family: 'DM Sans';
 	src: url('/github-repositories/LandGuru/fonts/DMSans-Medium.woff2')
 			format('woff2'),
 		url('/github-repositories/LandGuru/fonts/DMSans-Medium.woff') format('woff');
@@ -9,9 +9,20 @@
 	font-display: swap;
 }
 
-// regular
 @font-face {
 	font-family: 'Poppins';
+	src: url('/github-repositories/LandGuru/fonts/Poppins-Medium.woff2')
+			format('woff2'),
+		url('/github-repositories/LandGuru/fonts/Poppins-Medium.woff')
+			format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+// regular
+@font-face {
+	font-family: 'DM Sans';
 	src: url('/github-repositories/LandGuru/fonts/DMSans-Regular.woff2')
 			format('woff2'),
 		url('/github-repositories/LandGuru/fonts/DMSans-Regular.woff')
@@ -23,10 +34,20 @@
 
 // bold
 @font-face {
-	font-family: 'Poppins';
+	font-family: 'DM Sans';
 	src: url('/github-repositories/LandGuru/fonts/DMSans-Bold.woff2')
 			format('woff2'),
 		url('/github-repositories/LandGuru/fonts/DMSans-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('/github-repositories/LandGuru/fonts/Poppins-Bold.woff2')
+			format('woff2'),
+		url('/github-repositories/LandGuru/fonts/Poppins-Bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;

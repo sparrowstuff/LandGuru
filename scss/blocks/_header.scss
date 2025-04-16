@@ -1,0 +1,10 @@
+.header {
+	padding: 1.31rem 0 1.31rem 0;
+	$root: &;
+
+	&__wrapper {
+		@include flexCenter(row);
+		justify-content: space-between;
+		gap: 0.62rem;
+	}
+}
