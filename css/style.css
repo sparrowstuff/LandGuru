@@ -362,7 +362,6 @@ body {
   max-width: 100vw;
   padding: 0;
   flex-grow: 1;
-  overflow-x: hidden;
 }
 
 main {
@@ -479,4 +478,52 @@ button {
 }
 .main-link:hover .main-link__icon, .main-link:focus-visible .main-link__icon {
   color: #f6c416;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.main-nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.22rem;
+}
+.main-nav__link-text {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2.06rem;
+  color: #ffffff;
+  font-family: "DM Sans", "Arial", sans-serif;
+}
+.main-nav__icon {
+  color: #ffffff;
+  transition: color ease-in 0.3s, transform ease-in 0.3s;
+}
+.main-nav--burger {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 3.12rem;
+  padding: 0.81rem 1.93rem 0.81rem 1.93rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  transition: background-color ease-in 0.3s, color ease-in 0.3s;
+}
+.btn:hover, .btn:focus-visible {
+  background-color: #ffffff;
+  color: #0f2137;
 }/*# sourceMappingURL=style.css.map */

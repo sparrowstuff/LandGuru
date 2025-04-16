@@ -1,0 +1,20 @@
+.btn {
+	background-color: transparent;
+	border: 1.5px solid $white;
+	border-radius: 3.12rem;
+	padding: 0.81rem 1.93rem 0.81rem 1.93rem;
+
+	font-weight: 500;
+	font-size: $rem-1;
+	line-height: $rem-15;
+	letter-spacing: 0.01em;
+	color: $white;
+
+	transition: background-color $transition-300, color $transition-300;
+
+	&:hover,
+	&:focus-visible {
+		background-color: $white;
+		color: $coral;
+	}
+}

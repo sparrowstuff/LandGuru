@@ -1,0 +1,32 @@
+.main-nav {
+	$root: &;
+
+	&__list {
+		@include flexCenter(row);
+		gap: 2rem;
+	}
+
+	&__link {
+		@include flexCenter(row);
+		gap: 0.22rem;
+	}
+
+	&__link-text {
+		font-weight: 600;
+		font-size: $rem-1;
+		line-height: $rem-206;
+		color: $white;
+		font-family: $dm;
+	}
+
+	&__icon {
+		color: $white;
+		transition: color $transition-300, transform $transition-300;
+	}
+
+	&--burger {
+		opacity: 0;
+		pointer-events: none;
+		display: none;
+	}
+}
