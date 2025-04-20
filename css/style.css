@@ -572,13 +572,16 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.62rem;
+  padding: 0.31rem;
+  border-radius: 0.62rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 200%;
   position: absolute;
   top: 2.43rem;
-  left: 0;
-  width: 100%;
+  left: -3.81rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity ease-in 0.3s;
+  transition: opacity ease-in 0.3s, background-color ease-in 0.3s, box-shadow ease-in 0.3s;
 }
 .main-nav__links-menu::before {
   content: "";
@@ -594,6 +597,7 @@ button {
 }
 .main-nav__links-navigation .main-nav__link-text {
   font-weight: 200;
+  line-height: 1.5rem;
 }
 .main-nav__links-navigation:hover .main-nav__icon, .main-nav__links-navigation:focus-visible .main-nav__icon {
   color: #f6c416;
@@ -602,6 +606,7 @@ button {
 .main-nav__links-navigation:hover .main-nav__links-menu, .main-nav__links-navigation:focus-visible .main-nav__links-menu {
   opacity: 1;
   pointer-events: all;
+  background-color: #1f3e76;
 }
 .main-nav__nav-text, .main-nav__link-text {
   font-weight: 600;
@@ -640,11 +645,21 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.62rem;
   }
+}
+.main-nav--burger .main-nav__link-text {
+  line-height: 1.5rem;
 }
 .main-nav--burger .main-nav__links-menu {
   position: static;
   opacity: 1;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.main-nav--burger .main-nav__links-menu::before {
+  position: unset;
+  display: none;
 }
 
 .burger-btn {

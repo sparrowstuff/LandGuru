@@ -42,14 +42,19 @@
 	&__links-menu {
 		@include flexCenter;
 		gap: 0.62rem;
+		padding: 0.31rem;
+		border-radius: 0.62rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+		width: 200%;
 
 		position: absolute;
 		top: 2.43rem;
-		left: 0;
-		width: 100%;
+		left: -3.81rem;
+
 		opacity: 0;
 		pointer-events: none;
-		transition: opacity $transition-300;
+		transition: opacity $transition-300, background-color $transition-300,
+			box-shadow $transition-300;
 
 		&::before {
 			content: '';
@@ -67,6 +72,7 @@
 
 		#{$root}__link-text {
 			font-weight: 200;
+			line-height: $rem-15;
 		}
 
 		&:hover,
@@ -79,6 +85,7 @@
 			#{$root}__links-menu {
 				opacity: 1;
 				pointer-events: all;
+				background-color: $deepBlue;
 			}
 		}
 	}
@@ -115,12 +122,24 @@
 
 			#{$root}__list {
 				@include flexCenter;
+				gap: 0.62rem;
 			}
+		}
+
+		#{$root}__link-text {
+			line-height: $rem-15;
 		}
 
 		#{$root}__links-menu {
 			position: static;
 			opacity: 1;
+			width: 100%;
+			padding: 0.5rem 1rem;
+
+			&::before {
+				position: unset;
+				display: none;
+			}
 		}
 	}
 }
