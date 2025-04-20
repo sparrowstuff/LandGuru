@@ -424,7 +424,7 @@ button {
 }
 
 .container {
-  max-width: 81.87rem;
+  max-width: 82.31rem;
   padding: 0 1.87rem;
   margin: 0 auto;
   width: 100%;
@@ -697,11 +697,16 @@ button {
   line-height: 1.5rem;
   letter-spacing: 0.01em;
   color: #ffffff;
-  transition: background-color ease-in 0.3s, color ease-in 0.3s;
+  transition: background-color ease-in 0.3s, color ease-in 0.3s, box-shadow ease-in 0.3s;
 }
 .btn:hover, .btn:focus-visible {
   background-color: #ffffff;
   color: #0f2137;
+  box-shadow: 0 4px 10px #ffffff;
+}
+.btn--watch:hover, .btn--watch:focus-visible {
+  color: #ffffff;
+  box-shadow: 0 4px 10px #0f2137;
 }
 
 .transform .burger-btn__top-line {
@@ -712,4 +717,78 @@ button {
 }
 .transform .burger-btn__main-line {
   opacity: 0;
+}
+
+.hero {
+  padding: 3.31rem 0 5.87rem;
+}
+.hero__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: min(0.62rem, 1vw);
+}
+.hero__left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2.37rem;
+}
+.hero__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.81rem;
+}
+.hero__title {
+  font-weight: 700;
+  font-size: clamp(3.43rem, 7vw, 5.31rem);
+  line-height: 6.25rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  max-width: 41.12rem;
+}
+.hero__description {
+  font-size: clamp(0.85rem, 7vw, 1.12rem);
+  line-height: 2.62rem;
+  max-width: 31.68rem;
+  color: #ffffff;
+}
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2.31rem;
+}
+.hero__start-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.hero__watch-btn {
+  border: unset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.31rem;
+}
+.hero__watch-btn:hover, .hero__watch-btn:focus-visible {
+  box-shadow: 0 4px 10px #0f2137;
+  background-color: transparent;
+}
+.hero__watch-btn:hover .hero__watch-btn-text, .hero__watch-btn:focus-visible .hero__watch-btn-text {
+  transform: translateX(0.62rem);
+}
+.hero__watch-btn:hover .hero__watch-btn-icon, .hero__watch-btn:focus-visible .hero__watch-btn-icon {
+  transform: translateY(-0.1rem);
+}
+.hero__watch-btn-text, .hero__watch-btn-icon {
+  transition: transform ease-in 0.3s;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+.hero {
+	padding: 3.31rem 0 5.87rem;
+	$root: &;
+
+	&__main {
+		@include flexCenter(row);
+		gap: min(0.62rem, 1vw);
+	}
+
+	&__left-side {
+		@include flexCenter(column, start);
+		gap: 2.37rem;
+	}
+
+	&__heading {
+		@include flexCenter(column, start);
+		gap: 1.81rem;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: clamp($rem-343, 7vw, $rem-531);
+		line-height: $rem-625;
+		letter-spacing: -0.02em;
+		color: $white;
+		max-width: 41.12rem;
+	}
+
+	&__description {
+		font-size: clamp($rem-085, 7vw, $rem-112);
+		line-height: $rem-262;
+		max-width: 31.68rem;
+		color: $white;
+	}
+
+	&__inner {
+		@include flexCenter(column, start);
+		gap: 2.31rem;
+	}
+
+	&__start-block {
+		@include flexCenter(row);
+		gap: 1.25rem;
+	}
+
+	&__watch-btn {
+		border: unset;
+		@include flexCenter(row);
+		gap: 0.31rem;
+
+		&:hover,
+		&:focus-visible {
+			box-shadow: 0 4px 10px $coral;
+			background-color: transparent;
+
+			#{$root}__watch-btn-text {
+				transform: translateX(0.62rem);
+			}
+
+			#{$root}__watch-btn-icon {
+				transform: translateY(-0.1rem);
+			}
+		}
+	}
+
+	&__watch-btn-text,
+	&__watch-btn-icon {
+		transition: transform $transition-300;
+	}
+}

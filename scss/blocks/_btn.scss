@@ -10,11 +10,21 @@
 	letter-spacing: 0.01em;
 	color: $white;
 
-	transition: background-color $transition-300, color $transition-300;
+	transition: background-color $transition-300, color $transition-300,
+		box-shadow $transition-300;
 
 	&:hover,
 	&:focus-visible {
 		background-color: $white;
 		color: $coral;
+		box-shadow: 0 4px 10px $white;
+	}
+
+	&--watch {
+		&:hover,
+		&:focus-visible {
+			color: $white;
+			box-shadow: 0 4px 10px $coral;
+		}
 	}
 }
