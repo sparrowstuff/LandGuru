@@ -1,22 +1,71 @@
 .main-nav {
 	$root: &;
 
+	&__header-menu {
+		@include flexCenter(row);
+		gap: 1rem;
+	}
+
 	&__list {
 		@include flexCenter(row);
 		gap: 2rem;
+
+		@media (max-width: 62.5rem) {
+			gap: 1rem;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__icon {
+				color: $yellow;
+				transform: translateY(0.1rem);
+			}
+		}
 	}
 
 	&__link {
 		@include flexCenter(row);
 		gap: 0.22rem;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__link-text {
+				color: $yellow;
+			}
+		}
+	}
+
+	&__links-navigation {
+		cursor: pointer;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__link-text {
+				color: $yellow;
+			}
+
+			#{$root}__icon {
+				color: $yellow;
+				transform: translateY(0.1rem);
+			}
+		}
 	}
 
 	&__link-text {
 		font-weight: 600;
-		font-size: $rem-1;
 		line-height: $rem-206;
 		color: $white;
-		font-family: $dm;
+
+		transition: color $transition-300;
+	}
+
+	&__main-text {
+		@include flexCenter(row);
+		gap: 0.62rem;
 	}
 
 	&__icon {
@@ -24,9 +73,28 @@
 		transition: color $transition-300, transform $transition-300;
 	}
 
+	@media (max-width: 48rem) {
+		display: none;
+	}
+
 	&--burger {
-		opacity: 0;
-		pointer-events: none;
+		@media (max-width: 48rem) {
+			@include flexCenter;
+
+			#{$root}__list {
+				@include flexCenter;
+			}
+		}
+	}
+
+	&__links-menu {
+		@include flexCenter;
+		gap: 0.62rem;
+
+		position: absolute;
+		top: 2.43rem;
+		left: 1.18rem;
+		width: 100%;
 		display: none;
 	}
 }

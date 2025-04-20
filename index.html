@@ -49,15 +49,13 @@
 							>
 						</a>
 						<nav class="main-nav">
-							<ul class="main-nav__list">
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Home</span>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Adversite</span
+							<div class="main-nav__header-menu">
+								<a href="#" class="main-nav__link"
+									><span class="main-nav__link-text">Home</span></a
+								>
+								<span class="main-nav__links-navigation">
+									<span class="main-nav__main-text">
+										<span class="main-nav__link-text">Adversite</span
 										><svg
 											width="15"
 											height="15"
@@ -67,12 +65,29 @@
 										>
 											<use xlink:href="images/sprite.svg#link-down"></use>
 										</svg>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Supports</span>
-										<svg
+									</span>
+									<span class="main-nav__links-menu">
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+									</span>
+								</span>
+								<span class="main-nav__links-navigation">
+									<span class="main-nav__main-text">
+										<span class="main-nav__link-text">Supports</span
+										><svg
 											width="15"
 											height="15"
 											class="main-nav__icon"
@@ -81,14 +96,29 @@
 										>
 											<use xlink:href="images/sprite.svg#link-down"></use>
 										</svg>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Contact</span></a
-									>
-								</li>
-							</ul>
+									</span>
+									<span class="main-nav__links-menu">
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+										<a class="main-nav__link" href="#"
+											><div class="main-nav__link-text">
+												Lorem, ipsum dolor.
+											</div></a
+										>
+									</span>
+								</span>
+								<a href="#" class="main-nav__link"
+									><span class="main-nav__link-text">Contact</span></a
+								>
+							</div>
 						</nav>
 						<div class="header__btn-block">
 							<button class="header__start-btn btn" type="button">
@@ -104,48 +134,56 @@
 								<span class="burger-btn__bottom-line"></span>
 							</button>
 						</div>
-						<nav class="main-nav main-nav--burger">
-							<ul class="main-nav__list">
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Home</span>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Adversite</span
-										><svg
-											width="15"
-											height="15"
-											class="main-nav__icon"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 24 24"
+						<div class="header__burger-menu">
+							<nav class="main-nav main-nav--burger">
+								<ul class="main-nav__list">
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Home</span>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Adversite</span
+											><svg
+												width="15"
+												height="15"
+												class="main-nav__icon"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 24 24"
+											>
+												<use xlink:href="images/sprite.svg#link-down"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Supports</span>
+											<svg
+												width="15"
+												height="15"
+												class="main-nav__icon"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 24 24"
+											>
+												<use xlink:href="images/sprite.svg#link-down"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="main-nav__item">
+										<a href="#" class="main-nav__link"
+											><span class="main-nav__link-text">Contact</span></a
 										>
-											<use xlink:href="images/sprite.svg#link-down"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Supports</span>
-										<svg
-											width="15"
-											height="15"
-											class="main-nav__icon"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 24 24"
-										>
-											<use xlink:href="images/sprite.svg#link-down"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="main-nav__item">
-									<a href="#" class="main-nav__link"
-										><span class="main-nav__link-text">Contact</span></a
-									>
-								</li>
-							</ul>
-						</nav>
+									</li>
+								</ul>
+							</nav>
+							<button
+								class="header__start-btn header__start-btn--burger btn"
+								type="button"
+							>
+								Get Started
+							</button>
+						</div>
 					</div>
 				</div>
 			</header>

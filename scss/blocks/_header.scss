@@ -1,6 +1,8 @@
 .header {
 	padding: 1.31rem 0 1.31rem 0;
 	$root: &;
+	position: relative;
+	z-index: 9999;
 
 	&__wrapper {
 		@include flexCenter(row);
@@ -11,5 +13,42 @@
 	&__btn-block {
 		@include flexCenter(row);
 		gap: 0.62rem;
+	}
+
+	&__start-btn {
+		display: none;
+
+		@media (min-width: 48rem) {
+			display: block;
+		}
+	}
+
+	&__start-btn--burger {
+		@media (max-width: 48rem) {
+			display: block;
+		}
+	}
+
+	&__burger-menu {
+		@include flexCenter;
+		position: absolute;
+		top: 4.75rem;
+		left: 0;
+		right: 0;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		opacity: 0;
+		pointer-events: none;
+		width: 100%;
+		transition: opacity $transition-300, clip-path $transition-300;
+		border: 1px solid $coral;
+		border-radius: 1.93rem;
+		padding: 0.62rem;
+	}
+
+	&__burger-menu--opened {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		opacity: 1;
+		pointer-events: all;
+		background-color: $deepBlue;
 	}
 }
