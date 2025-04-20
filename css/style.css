@@ -592,6 +592,9 @@ button {
   position: relative;
   cursor: pointer;
 }
+.main-nav__links-navigation .main-nav__link-text {
+  font-weight: 200;
+}
 .main-nav__links-navigation:hover .main-nav__icon, .main-nav__links-navigation:focus-visible .main-nav__icon {
   color: #f6c416;
   transform: translateY(0.1rem);
@@ -600,14 +603,16 @@ button {
   opacity: 1;
   pointer-events: all;
 }
-.main-nav__link-text {
+.main-nav__nav-text, .main-nav__link-text {
   font-weight: 600;
   line-height: 2.06rem;
   color: #ffffff;
   text-align: center;
+}
+.main-nav__link-text {
   transition: color ease-in 0.3s;
 }
-.main-nav__main-text {
+.main-nav__main-text-block {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -636,6 +641,10 @@ button {
     align-items: center;
     justify-content: center;
   }
+}
+.main-nav--burger .main-nav__links-menu {
+  position: static;
+  opacity: 1;
 }
 
 .burger-btn {

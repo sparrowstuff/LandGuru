@@ -65,6 +65,10 @@
 		position: relative;
 		cursor: pointer;
 
+		#{$root}__link-text {
+			font-weight: 200;
+		}
+
 		&:hover,
 		&:focus-visible {
 			#{$root}__icon {
@@ -79,16 +83,19 @@
 		}
 	}
 
+	&__nav-text,
 	&__link-text {
 		font-weight: 600;
 		line-height: $rem-206;
 		color: $white;
 		text-align: center;
+	}
 
+	&__link-text {
 		transition: color $transition-300;
 	}
 
-	&__main-text {
+	&__main-text-block {
 		@include flexCenter(row);
 		gap: 0.62rem;
 	}
@@ -109,6 +116,11 @@
 			#{$root}__list {
 				@include flexCenter;
 			}
+		}
+
+		#{$root}__links-menu {
+			position: static;
+			opacity: 1;
 		}
 	}
 }
