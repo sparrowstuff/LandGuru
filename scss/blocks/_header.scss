@@ -32,6 +32,7 @@
 	&__burger-menu {
 		@include flexCenter;
 		position: absolute;
+		gap: 0.62rem;
 		top: 4.75rem;
 		left: 0;
 		right: 0;
@@ -39,7 +40,8 @@
 		opacity: 0;
 		pointer-events: none;
 		width: 100%;
-		transition: opacity $transition-300, clip-path $transition-300;
+		transition: opacity $transition-300, clip-path $transition-300,
+			background-color $transition-300;
 		border: 1px solid $coral;
 		border-radius: 1.93rem;
 		padding: 0.62rem;

@@ -436,7 +436,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #244886;
-  border-radius: 0 0 12.5rem 0;
+  border-radius: 0 0 18.5rem 0;
   min-height: 62.5rem;
 }
 
@@ -479,6 +479,7 @@ button {
   align-items: center;
   justify-content: center;
   position: absolute;
+  gap: 0.62rem;
   top: 4.75rem;
   left: 0;
   right: 0;
@@ -487,9 +488,9 @@ button {
   opacity: 0;
   pointer-events: none;
   width: 100%;
-  transition: opacity ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
-  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s;
-  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
+  transition: opacity ease-in 0.3s, background-color ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
+  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s, background-color ease-in 0.3s;
+  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s, background-color ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
   border: 1px solid #0f2137;
   border-radius: 1.93rem;
   padding: 0.62rem;
@@ -700,6 +701,7 @@ button {
   transition: background-color ease-in 0.3s, color ease-in 0.3s, box-shadow ease-in 0.3s;
 }
 .btn:hover, .btn:focus-visible {
+  outline: unset;
   background-color: #ffffff;
   color: #0f2137;
   box-shadow: 0 4px 10px #ffffff;
@@ -720,21 +722,67 @@ button {
 }
 
 .hero {
-  padding: 3.31rem 0 5.87rem;
+  padding: 5.31rem 0 5.87rem;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/github-repositories/LandGuru/images/hero/mobile-hero.png");
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  transition: opacity ease-in 0.3s;
+}
+@media (max-width: 93.75rem) {
+  .hero::before {
+    opacity: 0.4;
+    background-size: contain;
+    background-position: right;
+  }
+}
+@media (max-width: 51.87rem) {
+  .hero::before {
+    background-size: cover;
+    background-position: inherit;
+  }
+}
+@media (max-width: 48rem) {
+  .hero::before {
+    opacity: 0.2;
+    background-position: right;
+    background-size: contain;
+  }
+}
+@media (max-width: 35rem) {
+  .hero::before {
+    background: unset;
+  }
+}
+@media (max-width: 48rem) {
+  .hero {
+    padding: 2rem 0 2rem;
+  }
 }
 .hero__main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: min(0.62rem, 1vw);
+  position: relative;
 }
 .hero__left-side {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 2.37rem;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 10;
 }
 .hero__heading {
   display: flex;
@@ -742,6 +790,21 @@ button {
   align-items: start;
   justify-content: center;
   gap: 1.81rem;
+}
+@media (max-width: 48rem) {
+  .hero__heading {
+    gap: 1rem;
+  }
+}
+@media (max-width: 48rem) {
+  .hero .hero__left-side,
+  .hero .hero__heading,
+  .hero .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .hero__title {
   font-weight: 700;
@@ -751,11 +814,38 @@ button {
   color: #ffffff;
   max-width: 41.12rem;
 }
+@media (max-width: 48rem) {
+  .hero__title {
+    line-height: 3.75rem;
+  }
+}
+@media (max-width: 25rem) {
+  .hero__title {
+    font-size: 2.06rem;
+    line-height: 2.37rem;
+  }
+}
 .hero__description {
   font-size: clamp(0.85rem, 7vw, 1.12rem);
   line-height: 2.62rem;
   max-width: 31.68rem;
   color: #ffffff;
+}
+@media (max-width: 48rem) {
+  .hero__description {
+    line-height: 2.25rem;
+  }
+}
+@media (max-width: 25rem) {
+  .hero__description {
+    line-height: 2.06rem;
+  }
+}
+@media (max-width: 48rem) {
+  .hero .hero__description,
+  .hero .hero__title {
+    text-align: center;
+  }
 }
 .hero__inner {
   display: flex;
@@ -764,12 +854,25 @@ button {
   justify-content: center;
   gap: 2.31rem;
 }
+@media (max-width: 48rem) {
+  .hero__inner {
+    gap: 1rem;
+  }
+}
 .hero__start-block {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 0.8rem;
+}
+@media (max-width: 25rem) {
+  .hero__start-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .hero__watch-btn {
   border: unset;
@@ -778,17 +881,98 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.31rem;
+  padding: 0.81rem 0.62rem 0.81rem 0.62rem;
 }
 .hero__watch-btn:hover, .hero__watch-btn:focus-visible {
   box-shadow: 0 4px 10px #0f2137;
   background-color: transparent;
 }
 .hero__watch-btn:hover .hero__watch-btn-text, .hero__watch-btn:focus-visible .hero__watch-btn-text {
-  transform: translateX(0.62rem);
+  transform: translateX(0.32rem);
 }
 .hero__watch-btn:hover .hero__watch-btn-icon, .hero__watch-btn:focus-visible .hero__watch-btn-icon {
   transform: translateY(-0.1rem);
 }
 .hero__watch-btn-text, .hero__watch-btn-icon {
   transition: transform ease-in 0.3s;
+}
+.hero__sponsored-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.31rem;
+}
+@media (max-width: 36.25rem) {
+  .hero__sponsored-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.hero__sponsored-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2.62rem;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.hero__sponsored-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.68rem;
+}
+@media (max-width: 25rem) {
+  .hero__sponsored-list {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+  }
+}
+.hero__sponsored-item {
+  cursor: pointer;
+}
+.hero__sponsored-item:hover, .hero__sponsored-item:focus-visible {
+  outline: unset;
+}
+.hero__sponsored-item:hover .hero__sponsored-img, .hero__sponsored-item:focus-visible .hero__sponsored-img {
+  transform: translateY(-0.3rem);
+}
+.hero__link:hover, .hero__link:focus-visible {
+  outline: unset;
+}
+.hero__sponsored-img {
+  transition: transform ease-in 0.3s;
+}
+
+.hero-picture {
+  position: absolute;
+  display: block;
+  width: 18.87rem;
+  height: 21.7rem;
+  top: -3.2vh;
+  right: -2.5vw;
+  z-index: 2;
+  background: url("/github-repositories/LandGuru/svg/pattern.svg");
+  background-position-x: right;
+  background-position-y: top;
+}
+@media (max-width: 93.75rem) {
+  .hero-picture {
+    right: 1.5rem;
+  }
+}
+@media (max-width: 81.25rem) {
+  .hero-picture {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 51.87rem) {
+  .hero-picture {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

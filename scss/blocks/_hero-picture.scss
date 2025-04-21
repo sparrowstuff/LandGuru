@@ -1,0 +1,25 @@
+.hero-picture {
+	position: absolute;
+	display: block;
+	width: 18.87rem;
+	height: 21.7rem;
+	top: -3.2vh;
+	right: -2.5vw;
+	z-index: 2;
+
+	background: url('/github-repositories/LandGuru/svg/pattern.svg');
+	background-position-x: right;
+	background-position-y: top;
+
+	@media (max-width: 93.75rem) {
+		right: 1.5rem;
+	}
+
+	@media (max-width: 81.25rem) {
+		opacity: 0.7;
+	}
+
+	@media (max-width: 51.87rem) {
+		display: none;
+	}
+}

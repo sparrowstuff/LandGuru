@@ -15,6 +15,7 @@
 
 	&:hover,
 	&:focus-visible {
+		outline: unset;
 		background-color: $white;
 		color: $coral;
 		box-shadow: 0 4px 10px $white;
