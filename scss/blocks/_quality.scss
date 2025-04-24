@@ -17,13 +17,4 @@
 	&__heading {
 		@include flexCenter;
 	}
-
-	&__description {
-		font-weight: 700;
-		font-size: $rem-085;
-		line-height: $rem-25;
-		letter-spacing: 0.21em;
-		text-align: center;
-		color: $blue;
-	}
 }

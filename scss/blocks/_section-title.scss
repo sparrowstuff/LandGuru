@@ -9,4 +9,15 @@
 	@media (max-width: $vp-tablet) {
 		line-height: $rem-206;
 	}
+
+	&--core {
+		font-size: clamp($rem-206, 7vw, $rem-343);
+		line-height: $rem-343;
+		text-align: left;
+		max-width: 33.87rem;
+
+		@media (max-width: 52.25rem) {
+			text-align: center;
+		}
+	}
 }

@@ -1009,14 +1009,6 @@ button {
   align-items: center;
   justify-content: center;
 }
-.quality__description {
-  font-weight: 700;
-  font-size: 0.85rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.21em;
-  text-align: center;
-  color: #244886;
-}
 
 .features-list {
   display: grid;
@@ -1080,6 +1072,65 @@ button {
   color: #343d48;
   max-width: 16.56rem;
 }
+.features-list--column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.62rem;
+}
+.features-list--column .features-list__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.56rem 2.37rem 1.56rem 2rem;
+  width: 100%;
+}
+@media (max-width: 31.25rem) {
+  .features-list--column .features-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.features-list--column .features-list__icon-wrapper {
+  width: 3.56rem;
+  height: 3.56rem;
+  border-radius: 40%;
+}
+.features-list--column .features-list__item--case .features-list__icon-wrapper {
+  background-color: rgba(255, 67, 97, 0.2);
+  padding: 1.18rem 1.06rem 1.18rem 1.06rem;
+}
+.features-list--column .features-list__item--crown {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px 0px rgba(69, 88, 157, 0.07);
+  border-radius: 1.25rem;
+}
+.features-list--column .features-list__item--crown .features-list__icon-wrapper {
+  background-color: rgba(255, 67, 97, 0.2);
+  padding: 1.18rem 0.87rem 1.18rem 0.87rem;
+}
+.features-list--column .features-list__heading {
+  align-items: flex-start;
+  gap: 1.21rem;
+}
+@media (max-width: 31.25rem) {
+  .features-list--column .features-list__heading {
+    align-items: center;
+  }
+}
+.features-list--column .features-list__text {
+  max-width: 22.18rem;
+  text-align: left;
+}
+@media (max-width: 31.25rem) {
+  .features-list--column .features-list__text {
+    text-align: center;
+  }
+}
 
 .section-title {
   font-weight: 700;
@@ -1092,5 +1143,82 @@ button {
 @media (max-width: 1023px) {
   .section-title {
     line-height: 2.06rem;
+  }
+}
+.section-title--core {
+  font-size: clamp(2.06rem, 7vw, 3.43rem);
+  line-height: 3.43rem;
+  text-align: left;
+  max-width: 33.87rem;
+}
+@media (max-width: 52.25rem) {
+  .section-title--core {
+    text-align: center;
+  }
+}
+
+.section-description {
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.21em;
+  text-align: center;
+  color: #244886;
+  text-transform: uppercase;
+}
+
+.core {
+  padding: 6.18rem 0 6.18rem;
+  background: url("/github-repositories/LandGuru/images/background/core-pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+@media (max-width: 48rem) {
+  .core {
+    padding: 2rem 0 2rem;
+  }
+}
+.core__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: min(7vw, 6.12rem);
+}
+@media (max-width: 52.25rem) {
+  .core__main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.core__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.75rem;
+}
+@media (max-width: 52.25rem) {
+  .core__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.core__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.37rem;
+}
+@media (max-width: 31.25rem) {
+  .core__inner {
+    gap: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

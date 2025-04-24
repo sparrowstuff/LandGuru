@@ -1,0 +1,39 @@
+.core {
+	padding: 6.18rem 0 6.18rem;
+	background: url('/github-repositories/LandGuru/images/background/core-pattern.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+	@media (max-width: 48rem) {
+		padding: 2rem 0 2rem;
+	}
+
+	&__main {
+		@include flexCenter(row);
+		gap: min(7vw, 6.12rem);
+
+		@media (max-width: 52.25rem) {
+			@include flexCenter(column-reverse);
+			gap: 2rem;
+		}
+	}
+
+	&__heading {
+		@include flexCenter(column, flex-start);
+		gap: 1.75rem;
+
+		@media (max-width: 52.25rem) {
+			@include flexCenter;
+		}
+	}
+
+	&__inner {
+		@include flexCenter(column, flex-start);
+		gap: 3.37rem;
+
+		@media (max-width: 31.25rem) {
+			gap: 1.5rem;
+		}
+	}
+}
