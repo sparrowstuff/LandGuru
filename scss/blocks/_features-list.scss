@@ -1,0 +1,72 @@
+.features-list {
+	$root: &;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: start;
+	gap: min(8vw, 6.25rem);
+
+	@media (max-width: 48rem) {
+		grid-template-columns: repeat(2, 1fr);
+
+		#{$root}__item:nth-last-child(1) {
+			grid-column: span 2;
+		}
+	}
+
+	@media (max-width: 33.75rem) {
+		grid-template-columns: 1fr;
+
+		#{$root}__item:nth-last-child(1) {
+			grid-column: unset;
+		}
+	}
+
+	&__item,
+	&__heading {
+		@include flexCenter;
+		gap: 1.28rem;
+	}
+
+	&__icon-wrapper {
+		width: 6.87rem;
+		height: 6.87rem;
+		@include flexCenter;
+		border-radius: 1.87rem;
+	}
+
+	&__item--green {
+		#{$root}__icon-wrapper {
+			background-color: $bg-green;
+		}
+	}
+
+	&__item--purple {
+		#{$root}__icon-wrapper {
+			background-color: $bg-blue-02;
+		}
+	}
+
+	&__item--red {
+		#{$root}__icon-wrapper {
+			background-color: $bg-pink-02;
+		}
+	}
+
+	&__feature-name {
+		font-weight: 700;
+		font-size: $rem-112;
+		line-height: $rem-187;
+		color: $coral;
+		text-align: center;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: $rem-093;
+		line-height: $rem-175;
+		text-align: center;
+		color: $deepGrey;
+
+		max-width: 16.56rem;
+	}
+}

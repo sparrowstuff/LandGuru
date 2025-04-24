@@ -1,0 +1,29 @@
+.quality {
+	padding: 4.06rem 0 6.25rem;
+
+	@media (max-width: 48rem) {
+		padding: 2rem 0 2rem;
+	}
+
+	&__main {
+		@include flexCenter;
+		gap: 4.87rem;
+
+		@media (max-width: 48rem) {
+			gap: 2rem;
+		}
+	}
+
+	&__heading {
+		@include flexCenter;
+	}
+
+	&__description {
+		font-weight: 700;
+		font-size: $rem-085;
+		line-height: $rem-25;
+		letter-spacing: 0.21em;
+		text-align: center;
+		color: $blue;
+	}
+}

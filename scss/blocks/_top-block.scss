@@ -6,4 +6,9 @@
 	background-color: $blue;
 	border-radius: 0 0 18.5rem 0;
 	min-height: 62.5rem;
+
+	@media (max-width: $vp-tablet) {
+		min-height: 41.5rem;
+		border-radius: 0 0 6.5rem 0;
+	}
 }

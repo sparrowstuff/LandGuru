@@ -1,0 +1,12 @@
+.section-title {
+	font-weight: 700;
+	font-size: clamp($rem-137, 7vw, $rem-225);
+	line-height: $rem-343;
+	color: $coral;
+	letter-spacing: -0.015em;
+	text-align: center;
+
+	@media (max-width: $vp-tablet) {
+		line-height: $rem-206;
+	}
+}
