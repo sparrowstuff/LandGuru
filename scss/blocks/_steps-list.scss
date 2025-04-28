@@ -1,0 +1,100 @@
+.steps-list {
+	counter-reset: custom-counter;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: start;
+	gap: min(5vw, 3.75rem);
+
+	@media (max-width: 59.68rem) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 37.5rem) {
+		grid-template-columns: 1fr;
+	}
+
+	&__item {
+		counter-increment: custom-counter;
+
+		min-height: 16.43rem;
+		@include flexCenter(column, flex-start, flex-start);
+		gap: 1.56rem;
+
+		position: relative;
+
+		&::before {
+			content: counter(custom-counter, decimal-leading-zero);
+			background-color: $white;
+			width: 4.5rem;
+			height: 4.5rem;
+			border-radius: 40%;
+			@include flexCenter;
+			z-index: 5;
+
+			font-weight: 400;
+			font-size: $rem-187;
+			line-height: $rem-187;
+			color: $blue;
+		}
+
+		@media (max-width: 37.5rem) {
+			min-height: unset;
+			align-items: center;
+			border-bottom: 1px solid $white;
+			padding: 0 0 0.62rem 0;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 7%;
+		right: -21%;
+		opacity: 0.7;
+
+		@media (max-width: 59.68rem) {
+			right: 2%;
+		}
+
+		@media (max-width: 37.5rem) {
+			display: none;
+		}
+	}
+
+	&__text-block {
+		@include flexCenter(column, flex-start);
+		gap: 0.93rem;
+
+		@media (max-width: 37.5rem) {
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: $rem-137;
+		line-height: 155%;
+		color: $white;
+
+		@media (max-width: 37.5rem) {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: $rem-093;
+		line-height: $rem-162;
+		color: $white;
+
+		max-width: 16.43rem;
+
+		@media (max-width: 48rem) {
+			line-height: $rem-137;
+		}
+
+		@media (max-width: 37.5rem) {
+			text-align: center;
+		}
+	}
+}

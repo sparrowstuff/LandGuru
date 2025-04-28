@@ -1,0 +1,25 @@
+.banner {
+	background: url('/github-repositories/LandGuru/images/background/function-pattern.png');
+	background-color: $blue;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	min-height: 48.12rem;
+
+	&__main {
+		padding: 5.62rem 0 9.75rem;
+		@include flexCenter;
+		gap: 9.25rem;
+
+		@media (max-width: 48rem) {
+			gap: 2rem;
+			padding: 2rem 0 3rem;
+		}
+	}
+
+	&__heading {
+		@include flexCenter;
+		gap: 0.12rem;
+	}
+}
