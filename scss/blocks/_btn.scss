@@ -1,6 +1,7 @@
 .btn {
 	background-color: transparent;
-	border: 1.5px solid $white;
+	outline: 1.5px solid $white;
+	border: unset;
 	border-radius: 3.12rem;
 	padding: 0.81rem 1.93rem 0.81rem 1.93rem;
 
@@ -15,17 +16,27 @@
 
 	&:hover,
 	&:focus-visible {
-		outline: unset;
 		background-color: $white;
 		color: $coral;
-		box-shadow: 0 4px 10px $white;
+		box-shadow: 0 0.25rem 0.62rem $white;
 	}
 
 	&--watch {
 		&:hover,
 		&:focus-visible {
 			color: $white;
-			box-shadow: 0 4px 10px $coral;
+			box-shadow: 0 0.25rem 0.62rem $coral;
+		}
+	}
+
+	&--blue {
+		background-color: $blue;
+
+		&:hover,
+		&:focus-visible {
+			outline: 1.5px solid $blue;
+			color: $coral;
+			box-shadow: 0 0.25rem 0.62rem $coral;
 		}
 	}
 }

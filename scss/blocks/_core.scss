@@ -5,6 +5,8 @@
 	background-repeat: no-repeat;
 	background-position: bottom;
 
+	$root: &;
+
 	@media (max-width: 48rem) {
 		padding: 2rem 0 2rem;
 	}
@@ -34,6 +36,58 @@
 
 		@media (max-width: 31.25rem) {
 			gap: 1.5rem;
+		}
+	}
+
+	&--secondary {
+		#{$root}__main {
+			gap: 0.62rem;
+
+			@media (max-width: 52.25rem) {
+				flex-direction: column;
+			}
+		}
+
+		#{$root}__title {
+			max-width: 38rem;
+		}
+
+		#{$root}__inner {
+			gap: 2.5rem;
+
+			@media (max-width: 52.25rem) {
+				align-items: center;
+			}
+		}
+
+		#{$root}__heading {
+			gap: 0.5rem;
+		}
+
+		#{$root}__inner-info {
+			@include flexCenter(column, flex-start);
+			gap: 1.87rem;
+
+			@media (max-width: 52.25rem) {
+				align-items: center;
+			}
+		}
+
+		#{$root}__info {
+			font-weight: 400;
+			font-size: $rem-112;
+			line-height: $rem-262;
+
+			max-width: 28.37rem;
+
+			@media (max-width: 52.25rem) {
+				text-align: center;
+				line-height: $rem-206;
+			}
+		}
+
+		#{$root}__image {
+			width: 100%;
 		}
 	}
 }

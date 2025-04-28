@@ -429,6 +429,12 @@ button {
   margin: 0 auto;
   width: 100%;
 }
+@media (max-width: 48rem) {
+  .container {
+    padding: 0 1.25rem;
+    max-width: 48rem;
+  }
+}
 
 .top-block {
   background: url("/github-repositories/LandGuru/images/background/main-pattern.png");
@@ -696,7 +702,8 @@ button {
 
 .btn {
   background-color: transparent;
-  border: 1.5px solid #ffffff;
+  outline: 1.5px solid #ffffff;
+  border: unset;
   border-radius: 3.12rem;
   padding: 0.81rem 1.93rem 0.81rem 1.93rem;
   font-weight: 500;
@@ -707,14 +714,21 @@ button {
   transition: background-color ease-in 0.3s, color ease-in 0.3s, box-shadow ease-in 0.3s;
 }
 .btn:hover, .btn:focus-visible {
-  outline: unset;
   background-color: #ffffff;
   color: #0f2137;
-  box-shadow: 0 4px 10px #ffffff;
+  box-shadow: 0 0.25rem 0.62rem #ffffff;
 }
 .btn--watch:hover, .btn--watch:focus-visible {
   color: #ffffff;
-  box-shadow: 0 4px 10px #0f2137;
+  box-shadow: 0 0.25rem 0.62rem #0f2137;
+}
+.btn--blue {
+  background-color: #244886;
+}
+.btn--blue:hover, .btn--blue:focus-visible {
+  outline: 1.5px solid #244886;
+  color: #0f2137;
+  box-shadow: 0 0.25rem 0.62rem #0f2137;
 }
 
 .transform .burger-btn__top-line {
@@ -1284,4 +1298,53 @@ button {
   .core__inner {
     gap: 1.5rem;
   }
+}
+.core--secondary .core__main {
+  gap: 0.62rem;
+}
+@media (max-width: 52.25rem) {
+  .core--secondary .core__main {
+    flex-direction: column;
+  }
+}
+.core--secondary .core__title {
+  max-width: 38rem;
+}
+.core--secondary .core__inner {
+  gap: 2.5rem;
+}
+@media (max-width: 52.25rem) {
+  .core--secondary .core__inner {
+    align-items: center;
+  }
+}
+.core--secondary .core__heading {
+  gap: 0.5rem;
+}
+.core--secondary .core__inner-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.87rem;
+}
+@media (max-width: 52.25rem) {
+  .core--secondary .core__inner-info {
+    align-items: center;
+  }
+}
+.core--secondary .core__info {
+  font-weight: 400;
+  font-size: 1.12rem;
+  line-height: 2.62rem;
+  max-width: 28.37rem;
+}
+@media (max-width: 52.25rem) {
+  .core--secondary .core__info {
+    text-align: center;
+    line-height: 2.06rem;
+  }
+}
+.core--secondary .core__image {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
