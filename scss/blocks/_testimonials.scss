@@ -1,0 +1,16 @@
+.testimonials {
+	padding: 6.62rem 0 6.25rem;
+
+	&__main {
+		@include flexCenter;
+		gap: 4.5rem;
+
+		@media (max-width: 48rem) {
+			gap: 2rem;
+		}
+	}
+
+	&__heading {
+		@include flexCenter;
+	}
+}

@@ -1,0 +1,96 @@
+.customer-card {
+	max-width: 26.37rem;
+	min-height: 25.12rem;
+	@include flexCenter(column, flex-start);
+	padding: 2.06rem 0.87rem 2.56rem 2.5rem;
+	background-color: $white;
+	gap: 1.25rem;
+
+	transition: box-shadow $transition-300;
+
+	&:hover,
+	&:focus-visible {
+		box-shadow: 0px 6px 47px 0px $card-shadow;
+	}
+
+	@media (max-width: 48rem) {
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	&__heading {
+		@include flexCenter(column, flex-start);
+		gap: 0.37rem;
+
+		@media (max-width: 48rem) {
+			align-items: center;
+		}
+	}
+
+	&__commentary-title {
+		font-weight: 700;
+		font-size: $rem-1;
+		line-height: $rem-206;
+		color: $deepGrey;
+
+		@media (max-width: 48rem) {
+			text-align: center;
+		}
+	}
+
+	&__stars-block {
+		@include flexCenter(row, flex-start, flex-start);
+	}
+
+	&__star-icon {
+		color: $yellow;
+	}
+
+	&__star-icon:nth-child(5) {
+		color: $grey;
+	}
+
+	&__inner {
+		@include flexCenter(column, flex-start);
+		gap: 2.25rem;
+
+		@media (max-width: 48rem) {
+			gap: 1rem;
+			align-items: center;
+		}
+	}
+
+	&__review {
+		font-weight: 400;
+		font-size: $rem-112;
+		line-height: $rem-206;
+
+		@media (max-width: 48rem) {
+			text-align: center;
+		}
+	}
+
+	&__person {
+		@include flexCenter(row);
+		gap: 1.18rem;
+	}
+
+	&__name-block {
+		@include flexCenter(column, flex-start);
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: $rem-1;
+		line-height: $rem-25;
+		letter-spacing: -0.04em;
+		color: $coral;
+	}
+
+	&__social {
+		font-size: $rem-093;
+		line-height: $rem-25;
+		letter-spacing: -0.038em;
+		color: $lightBlue;
+	}
+}

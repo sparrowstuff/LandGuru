@@ -1491,4 +1491,162 @@ button {
   .steps-list__description {
     text-align: center;
   }
+}
+
+.testimonials {
+  padding: 6.62rem 0 6.25rem;
+}
+.testimonials__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5rem;
+}
+@media (max-width: 48rem) {
+  .testimonials__main {
+    gap: 2rem;
+  }
+}
+.testimonials__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper {
+  width: 100%;
+  position: relative;
+  min-height: 27.87rem;
+}
+
+.swiper-button-next {
+  content: url("/github-repositories/LandGuru/svg/arrow-right-long.svg");
+  height: 1rem;
+  top: var(--swiper-navigation-top-offset, 100%);
+  right: var(--swiper-navigation-sides-offset, 45%);
+}
+@media (max-width: 48rem) {
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 37%);
+  }
+}
+
+.swiper-button-prev {
+  content: url("/github-repositories/LandGuru/svg/arrow-left.svg");
+  height: 1rem;
+  top: var(--swiper-navigation-top-offset, 100%);
+  left: var(--swiper-navigation-sides-offset, 45%);
+}
+@media (max-width: 48rem) {
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 37%);
+  }
+}
+
+.customer-card {
+  max-width: 26.37rem;
+  min-height: 25.12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.06rem 0.87rem 2.56rem 2.5rem;
+  background-color: #ffffff;
+  gap: 1.25rem;
+  transition: box-shadow ease-in 0.3s;
+}
+.customer-card:hover, .customer-card:focus-visible {
+  box-shadow: 0px 6px 47px 0px rgba(38, 78, 118, 0.1);
+}
+@media (max-width: 48rem) {
+  .customer-card {
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+.customer-card__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.37rem;
+}
+@media (max-width: 48rem) {
+  .customer-card__heading {
+    align-items: center;
+  }
+}
+.customer-card__commentary-title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2.06rem;
+  color: #343d48;
+}
+@media (max-width: 48rem) {
+  .customer-card__commentary-title {
+    text-align: center;
+  }
+}
+.customer-card__stars-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.customer-card__star-icon {
+  color: #f6c416;
+}
+.customer-card__star-icon:nth-child(5) {
+  color: #dadada;
+}
+.customer-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.25rem;
+}
+@media (max-width: 48rem) {
+  .customer-card__inner {
+    gap: 1rem;
+    align-items: center;
+  }
+}
+.customer-card__review {
+  font-weight: 400;
+  font-size: 1.12rem;
+  line-height: 2.06rem;
+}
+@media (max-width: 48rem) {
+  .customer-card__review {
+    text-align: center;
+  }
+}
+.customer-card__person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.18rem;
+}
+.customer-card__name-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.customer-card__name {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.04em;
+  color: #0f2137;
+}
+.customer-card__social {
+  font-size: 0.93rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.038em;
+  color: #25a0ff;
 }/*# sourceMappingURL=style.css.map */
