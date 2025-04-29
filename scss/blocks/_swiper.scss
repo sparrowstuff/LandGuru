@@ -9,7 +9,7 @@
 	content: url('/github-repositories/LandGuru/svg/arrow-right-long.svg');
 	height: 1rem;
 
-	top: var(--swiper-navigation-top-offset, 100%);
+	top: var(--swiper-navigation-top-offset, 101%);
 	right: var(--swiper-navigation-sides-offset, 45%);
 
 	@media (max-width: 48rem) {
@@ -21,10 +21,18 @@
 	content: url('/github-repositories/LandGuru/svg/arrow-left.svg');
 	height: 1rem;
 
-	top: var(--swiper-navigation-top-offset, 100%);
+	top: var(--swiper-navigation-top-offset, 101%);
 	left: var(--swiper-navigation-sides-offset, 45%);
 
 	@media (max-width: 48rem) {
 		left: var(--swiper-navigation-sides-offset, 37%);
 	}
+}
+
+.swiper-slide {
+	transition: opacity $transition-300, scale $transition-300;
+}
+
+.swiper-slide-next {
+	scale: 1.2;
 }
