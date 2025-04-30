@@ -22,7 +22,7 @@
 	height: 1rem;
 
 	top: var(--swiper-navigation-top-offset, 101%);
-	left: var(--swiper-navigation-sides-offset, 45%);
+	left: var(--swiper-navigation-sides-offset, 42%);
 
 	@media (max-width: 48rem) {
 		left: var(--swiper-navigation-sides-offset, 37%);
@@ -35,4 +35,14 @@
 
 .swiper-slide-next {
 	scale: 1.2;
+
+	@media (max-width: 62.5rem) {
+		scale: 1;
+	}
+}
+
+.swiper-slide-active {
+	@media (max-width: 62.5rem) {
+		scale: 1.1;
+	}
 }

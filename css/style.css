@@ -1305,29 +1305,29 @@ button {
     gap: 1.5rem;
   }
 }
-.core--secondary .core__main {
+.core--secondary .core__main, .core--secure .core__main {
   gap: 0.62rem;
 }
 @media (max-width: 52.25rem) {
-  .core--secondary .core__main {
+  .core--secondary .core__main, .core--secure .core__main {
     flex-direction: column;
   }
 }
-.core--secondary .core__title {
+.core--secondary .core__title, .core--secure .core__title {
   max-width: 38rem;
 }
-.core--secondary .core__inner {
+.core--secondary .core__inner, .core--secure .core__inner {
   gap: 2.5rem;
 }
 @media (max-width: 52.25rem) {
-  .core--secondary .core__inner {
+  .core--secondary .core__inner, .core--secure .core__inner {
     align-items: center;
   }
 }
-.core--secondary .core__heading {
+.core--secondary .core__heading, .core--secure .core__heading {
   gap: 0.5rem;
 }
-.core--secondary .core__inner-info {
+.core--secondary .core__inner-info, .core--secure .core__inner-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1335,24 +1335,29 @@ button {
   gap: 1.87rem;
 }
 @media (max-width: 52.25rem) {
-  .core--secondary .core__inner-info {
+  .core--secondary .core__inner-info, .core--secure .core__inner-info {
     align-items: center;
   }
 }
-.core--secondary .core__info {
+.core--secondary .core__info, .core--secure .core__info {
   font-weight: 400;
   font-size: 1.12rem;
   line-height: 2.62rem;
   max-width: 28.37rem;
 }
 @media (max-width: 52.25rem) {
-  .core--secondary .core__info {
+  .core--secondary .core__info, .core--secure .core__info {
     text-align: center;
     line-height: 2.06rem;
   }
 }
-.core--secondary .core__image {
+.core--secondary .core__image, .core--secure .core__image {
   width: 100%;
+}
+@media (max-width: 52.25rem) {
+  .core--secure .core__main {
+    flex-direction: column-reverse;
+  }
 }
 
 .banner {
@@ -1537,7 +1542,7 @@ button {
   content: url("/github-repositories/LandGuru/svg/arrow-left.svg");
   height: 1rem;
   top: var(--swiper-navigation-top-offset, 101%);
-  left: var(--swiper-navigation-sides-offset, 45%);
+  left: var(--swiper-navigation-sides-offset, 42%);
 }
 @media (max-width: 48rem) {
   .swiper-button-prev {
@@ -1551,6 +1556,17 @@ button {
 
 .swiper-slide-next {
   scale: 1.2;
+}
+@media (max-width: 62.5rem) {
+  .swiper-slide-next {
+    scale: 1;
+  }
+}
+
+@media (max-width: 62.5rem) {
+  .swiper-slide-active {
+    scale: 1.1;
+  }
 }
 
 .customer-card {

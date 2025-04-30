@@ -39,7 +39,8 @@
 		}
 	}
 
-	&--secondary {
+	&--secondary,
+	&--secure {
 		#{$root}__main {
 			gap: 0.62rem;
 
@@ -88,6 +89,14 @@
 
 		#{$root}__image {
 			width: 100%;
+		}
+	}
+
+	&--secure {
+		@media (max-width: 52.25rem) {
+			#{$root}__main {
+				flex-direction: column-reverse;
+			}
 		}
 	}
 }
