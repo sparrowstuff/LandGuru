@@ -1,0 +1,77 @@
+.plan-choice {
+	padding: 4.37rem 2.5rem 3.12rem 2.5rem;
+	background-color: $lightBlue-card-bg;
+	border-radius: 0.62rem;
+	min-height: 42.5rem;
+
+	@include flexCenter(column, flex-start, unset);
+
+	&__main {
+		height: 100%;
+		@include flexCenter(column, flex-start, unset);
+		gap: 3.62rem;
+	}
+
+	&__inner {
+		@include flexCenter(row, baseline, space-between);
+		gap: 1.25rem;
+		width: 100%;
+
+		position: relative;
+	}
+
+	&__heading {
+		@include flexCenter(column, flex-start);
+		gap: 0.4rem;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: $rem-137;
+		line-height: $rem-137;
+		color: $white;
+		letter-spacing: -0.05em;
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: $rem-1;
+		line-height: $rem-175;
+		color: $white;
+
+		opacity: 0.7;
+	}
+
+	&__recommended {
+		position: absolute;
+		top: -2.5rem;
+		left: 0;
+
+		background-color: $orange;
+		padding: 0.06rem 0.5rem 0.12rem 0.5rem;
+		border-radius: 0.18rem;
+
+		font-weight: 700;
+		font-size: $rem-085;
+		line-height: $rem-175;
+		color: $white;
+	}
+
+	&__price-block {
+		@include flexCenter(column, flex-end);
+	}
+
+	&__start {
+		font-weight: 400;
+		font-size: $rem-1;
+		line-height: $rem-175;
+		color: $white;
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: $rem-162;
+		line-height: $rem-162;
+		color: $green;
+	}
+}
