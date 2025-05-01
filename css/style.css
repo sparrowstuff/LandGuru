@@ -1389,6 +1389,19 @@ button {
   justify-content: center;
   gap: 0.12rem;
 }
+.banner--plan .banner__main {
+  gap: 5rem;
+}
+@media (max-width: 48rem) {
+  .banner--plan .banner__main {
+    gap: 1.5rem;
+  }
+}
+.banner__plan-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(3vw, 1.87rem);
+}
 
 .steps-list {
   counter-reset: custom-counter;
