@@ -1402,6 +1402,11 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: min(3vw, 1.87rem);
 }
+@media (max-width: 55.62rem) {
+  .banner__plan-menu {
+    grid-template-columns: 1fr;
+  }
+}
 
 .steps-list {
   counter-reset: custom-counter;
@@ -1693,10 +1698,38 @@ button {
   background-color: #2f5392;
   border-radius: 0.62rem;
   min-height: 42.5rem;
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: unset;
+  transition: background-color ease-in 0.3s, transform ease-in 0.3s;
+}
+.plan-choice:hover, .plan-choice:focus-visible {
+  background-color: #ffffff;
+  transform: translateY(-0.62rem);
+}
+.plan-choice:hover .plan-choice__title, .plan-choice:focus-visible .plan-choice__title {
+  color: #0f2137;
+}
+.plan-choice:hover .plan-choice__description, .plan-choice:focus-visible .plan-choice__description {
+  color: #343d48;
+  opacity: 1;
+}
+.plan-choice:hover .plan-choice__start, .plan-choice:focus-visible .plan-choice__start {
+  color: #343d48;
+}
+.plan-choice:hover .plan-choice__text, .plan-choice:focus-visible .plan-choice__text {
+  color: #343d48;
+}
+.plan-choice:hover .plan-choice__item--locked .plan-choice__icon, .plan-choice:focus-visible .plan-choice__item--locked .plan-choice__icon {
+  opacity: 1;
+  color: #dadada;
+}
+@media (max-width: 55.62rem) {
+  .plan-choice {
+    padding: 4.37rem 2rem 3.12rem 2rem;
+  }
 }
 .plan-choice__main {
   height: 100%;
@@ -1728,6 +1761,7 @@ button {
   line-height: 1.37rem;
   color: #ffffff;
   letter-spacing: -0.05em;
+  transition: color ease-in 0.3s;
 }
 .plan-choice__description {
   font-weight: 400;
@@ -1735,6 +1769,7 @@ button {
   line-height: 1.75rem;
   color: #ffffff;
   opacity: 0.7;
+  transition: color ease-in 0.3s, opacity ease-in 0.3s;
 }
 .plan-choice__recommended {
   position: absolute;
@@ -1759,10 +1794,50 @@ button {
   font-size: 1rem;
   line-height: 1.75rem;
   color: #ffffff;
+  transition: color ease-in 0.3s;
 }
 .plan-choice__price {
   font-weight: 700;
   font-size: 1.62rem;
   line-height: 1.62rem;
   color: #25cb9e;
+}
+.plan-choice__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.87rem;
+}
+@media (max-width: 55.62rem) {
+  .plan-choice__list {
+    margin-bottom: 0.62rem;
+  }
+}
+.plan-choice__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.87rem;
+}
+.plan-choice__text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.62rem;
+  color: #ffffff;
+  transition: color ease-in 0.3s;
+}
+.plan-choice__icon {
+  transition: opacity ease-in 0.3s, color ease-in 0.3s;
+}
+.plan-choice__item--locked .plan-choice__icon {
+  color: #ffffff;
+  opacity: 0.7;
+}
+.plan-choice__item--locked .plan-choice__text {
+  opacity: 0.7;
+}
+.plan-choice__btn {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

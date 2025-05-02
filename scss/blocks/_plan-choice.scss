@@ -3,8 +3,44 @@
 	background-color: $lightBlue-card-bg;
 	border-radius: 0.62rem;
 	min-height: 42.5rem;
-
+	max-width: 30rem;
 	@include flexCenter(column, flex-start, unset);
+	$root: &;
+	transition: background-color $transition-300, transform $transition-300;
+
+	&:hover,
+	&:focus-visible {
+		background-color: $white;
+		transform: translateY(-0.62rem);
+
+		#{$root}__title {
+			color: $coral;
+		}
+
+		#{$root}__description {
+			color: $deepGrey;
+			opacity: 1;
+		}
+
+		#{$root}__start {
+			color: $deepGrey;
+		}
+
+		#{$root}__text {
+			color: $deepGrey;
+		}
+
+		#{$root}__item--locked {
+			#{$root}__icon {
+				opacity: 1;
+				color: $grey;
+			}
+		}
+	}
+
+	@media (max-width: 55.62rem) {
+		padding: 4.37rem 2rem 3.12rem 2rem;
+	}
 
 	&__main {
 		height: 100%;
@@ -31,6 +67,8 @@
 		line-height: $rem-137;
 		color: $white;
 		letter-spacing: -0.05em;
+
+		transition: color $transition-300;
 	}
 
 	&__description {
@@ -40,6 +78,8 @@
 		color: $white;
 
 		opacity: 0.7;
+
+		transition: color $transition-300, opacity $transition-300;
 	}
 
 	&__recommended {
@@ -66,6 +106,8 @@
 		font-size: $rem-1;
 		line-height: $rem-175;
 		color: $white;
+
+		transition: color $transition-300;
 	}
 
 	&__price {
@@ -73,5 +115,47 @@
 		font-size: $rem-162;
 		line-height: $rem-162;
 		color: $green;
+	}
+
+	&__list {
+		@include flexCenter(column, flex-start);
+		gap: 1.87rem;
+
+		@media (max-width: 55.62rem) {
+			margin-bottom: 0.62rem;
+		}
+	}
+
+	&__item {
+		@include flexCenter(row);
+		gap: 0.87rem;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: $rem-1;
+		line-height: $rem-162;
+		color: $white;
+
+		transition: color $transition-300;
+	}
+
+	&__icon {
+		transition: opacity $transition-300, color $transition-300;
+	}
+
+	&__item--locked {
+		#{$root}__icon {
+			color: $white;
+			opacity: 0.7;
+		}
+
+		#{$root}__text {
+			opacity: 0.7;
+		}
+	}
+
+	&__btn {
+		margin: 0 auto;
 	}
 }
